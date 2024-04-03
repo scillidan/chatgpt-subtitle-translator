@@ -51,8 +51,10 @@ Options:
     Source language (default: "") 
   - `--to <language>`  
     Target language (default: "English")
-  - `-f, --file <file>`  
+  - `-i, --input <file>`  
     Input source text with the content of this file, in `.srt` format or plain text
+  - `-o, --output <file>`  
+    Output file name, defaults to be based on input file name
   - `-p, --plain-text <text>`  
     Input source text with this plain text argument
   - `-s, --system-instruction <instruction>`  
@@ -133,7 +135,7 @@ Chuck Norris can walk with the animals, talk with the animals;
 
 ### Plain text file  
 ```bash
-cli/translator.mjs --stream --temperature 0 --file test/data/test_cn.txt
+cli/translator.mjs --stream --temperature 0 --input test/data/test_cn.txt
 ```  
 Input file: [test/data/test_cn.txt](test/data/test_cn.txt)
 ```
@@ -147,7 +149,7 @@ Goodbye!
 ```
 ### SRT file
 ```bash
-cli/translator.mjs --stream --temperature 0 --file test/data/test_ja_small.srt
+cli/translator.mjs --stream --temperature 0 --input test/data/test_ja_small.srt
 ```  
 Input file: [test/data/test_ja_small.srt](test/data/test_ja_small.srt)
 ```srt
